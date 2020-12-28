@@ -25,5 +25,15 @@ pipeline {
               sh 'echo "chassis" ' // add chassis
            }
         }
+      stage('Terraform Init') {
+            steps  {
+               withEnv(['TERRAFORM_PATH=/usr/local/bin']){
+               sh '''
+               cd /Users/hgo2/IdeaProjects/cicd/terraform/manhattan/create-storage
+               $TERRAFORM_PATH/terraform init
+               '''
+               }
+            }
+         }
    }
 }
