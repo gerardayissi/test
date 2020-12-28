@@ -25,7 +25,7 @@ pipeline {
               sh 'echo "chassis" ' // add chassis
            }
         }
-      stage('Terraform Init') {
+      stage('Terraform Init Step') {
             steps  {
                withEnv(['TERRAFORM_PATH=/usr/local/bin']){
                sh '''
