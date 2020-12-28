@@ -20,5 +20,10 @@ pipeline {
               sh 'grep "body" build/car.txt'
           }
       }
+      stage('Build Echo') {
+           steps {
+              sh 'echo "chassis" ' // add chassis
+           }
+        }
    }
 }
