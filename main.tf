@@ -1,13 +1,13 @@
 terraform {
   backend "gcs" {
-    bucket  = "manhattan-active-omni-tf-state-prod-001"
+    bucket  = "tst1-integration-3ca6-gerard"
     prefix  = "terraform/state" 
   }
 }
 
 provider "google" {
- credentials = file("/Users/hgo2/google/keys/manhattan-active-omni.json")
- project     = "manhattan-active-omni"
+ credentials = file("/Users/hgo2/google/keys/tbi-mao-tst1.json")
+ project     = "tst1-integration-3ca6"
  region      = "us-east4"
 }
 
