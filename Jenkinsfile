@@ -29,6 +29,8 @@ pipeline {
             steps  {
                withEnv(['TERRAFORM_PATH=/usr/local/bin']){
                sh '''
+               /Users/hgo2/Downloads/google-cloud-sdk/bin/gcloud auth activate-service-account 432542458034-compute@developer.gserviceaccount.com --key-file /Users/hgo2/google/keys/manhattan-active-omni.json
+               /Users/hgo2/Downloads/google-cloud-sdk/bin/gcloud config set project manhattan-active-omni
                cd /Users/hgo2/IdeaProjects/cicd/terraform/manhattan/create-storage
                $TERRAFORM_PATH/terraform init
                '''
