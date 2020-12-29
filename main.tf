@@ -1,5 +1,3 @@
-terraform {
-}
 
 provider "google" {
  credentials = file("/Users/hgo2/google/keys/tbi-mao-tst1.json")
