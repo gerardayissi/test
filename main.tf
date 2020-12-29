@@ -1,8 +1,4 @@
 terraform {
-  backend "gcs" {
-    bucket  = "tst1-integration-3ca6-gerard"
-    prefix  = "terraform/state" 
-  }
 }
 
 provider "google" {
